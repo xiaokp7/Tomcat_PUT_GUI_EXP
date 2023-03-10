@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Tomcat PUT EXP:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Tomcat_PUT_EXP_jar</output-path>
+    <root id="archive" name="Tomcat PUT EXP.jar">
+      <element id="module-output" name="Tomcat PUT EXP" />
+    </root>
+  </artifact>
+</component>

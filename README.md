@@ -17,7 +17,8 @@ Tomcat PUT方法任意文件写入（CVE-2017-12615）图形化漏洞利用工�
 
   执行操作系统命令
   
-  <img width="600" alt="image" src="https://user-images.githubusercontent.com/105373673/224598759-faefbf79-5b90-45f9-bcc2-99de5bd3ad57.png">
+  <img width="600" alt="image" src="https://user-images.githubusercontent.com/105373673/224619471-03755557-c300-4af4-a088-db05860b1eff.png">
+
   
 - 文件上传
 

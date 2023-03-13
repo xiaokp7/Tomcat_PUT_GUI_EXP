@@ -1,4 +1,4 @@
-# Tomcat_PUT_EXP
+# Tomcat_PUT_EXP_V1.2
 Tomcat PUT方法任意文件写入（CVE-2017-12615）exp
 
 # 漏洞介绍
@@ -8,11 +8,20 @@ Tomcat PUT方法任意文件写入（CVE-2017-12615）exp
  # 
 # 工具介绍
 - 漏洞检测
+
   检测目标站点是否存在tomcat是否存在put方法任意文件写入CVE-2017-12615）漏洞
   
+  <img width="600" alt="image" src="https://user-images.githubusercontent.com/105373673/224598722-b892d618-5153-466a-8fea-1716c3e5e1f6.png">
+  
 - 命令执行
+
   执行操作系统命令
   
+  <img width="600" alt="image" src="https://user-images.githubusercontent.com/105373673/224598759-faefbf79-5b90-45f9-bcc2-99de5bd3ad57.png">
+  
 - 文件上传
+
   默认上传哥斯拉webshell，可自定义上传webshell内容及上传文件名
+  
+<img width="1227" alt="image" src="https://user-images.githubusercontent.com/105373673/224598784-8a78eb59-58fa-4896-b769-1b9836b6efef.png">
 

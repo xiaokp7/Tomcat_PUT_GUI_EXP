@@ -9,7 +9,7 @@ Tomcat PUT方法任意文件写入（CVE-2017-12615）exp
 # 工具介绍
 - 漏洞检测
 
-  检测目标站点是否存在tomcat是否存在put方法任意文件写入CVE-2017-12615）漏洞
+  检测目标站点是否存在tomcat put方法任意文件写入CVE-2017-12615）漏洞
   
   <img width="600" alt="image" src="https://user-images.githubusercontent.com/105373673/224598722-b892d618-5153-466a-8fea-1716c3e5e1f6.png">
   

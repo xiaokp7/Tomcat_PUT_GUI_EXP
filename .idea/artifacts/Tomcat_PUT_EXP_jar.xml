@@ -2,7 +2,7 @@
   <artifact type="jar" name="Tomcat PUT EXP:jar">
     <output-path>$PROJECT_DIR$/out/artifacts/Tomcat_PUT_EXP_jar</output-path>
     <root id="archive" name="Tomcat PUT EXP.jar">
-      <element id="module-output" name="Tomcat PUT EXP" />
+      <element id="module-output" name="Tomcat_PUT_EXP" />
     </root>
   </artifact>
 </component>

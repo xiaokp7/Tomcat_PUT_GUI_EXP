@@ -1,4 +1,4 @@
-package sample;
+package cn.xiaokp.Tomcat_PUT_EXP;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -14,10 +14,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Tomcat PUT漏洞 EXP  by xiaokp");
+        //导入fxml
+        Parent root = FXMLLoader.load(getClass().getResource("UI.fxml"));
+        //设置窗口标题
+        primaryStage.setTitle("Tomcat_PUT_EXP V1.4  by xiaokp");
+        //设置场景
         primaryStage.setScene(new Scene(root));
+        //设置窗口不可调节大小
         primaryStage.setResizable(false);
+        //显示窗口
         primaryStage.show();
     }
 }

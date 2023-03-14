@@ -1,4 +1,4 @@
-# Tomcat_PUT_EXP_V1.2
+# Tomcat_PUT_EXP_V1.4
 Tomcat PUT方法任意文件写入（CVE-2017-12615）图形化漏洞利用工具
 
 # 漏洞介绍
